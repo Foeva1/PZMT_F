@@ -25,14 +25,15 @@ class MainActivity : AppCompatActivity() {
         super.onSaveInstanceState(savedInstanceState)
     }
 
-    override fun onStop() {
-        super.onStop()
+    override fun onPause() {
+        super.onPause()
         if (running){
-            running = false
             saveOffset()
+            running = false
             stopwatch.stop()
         }
     }
+
 
     override fun onRestart() {
         super.onRestart()
