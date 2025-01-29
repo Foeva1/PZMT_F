@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     override fun onStop() {
         super.onStop()
         if (running){
+            running = false
             saveOffset()
             stopwatch.stop()
         }
